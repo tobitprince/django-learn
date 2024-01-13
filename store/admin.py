@@ -48,8 +48,8 @@ class ProductAdmin(admin.ModelAdmin):
     prepopulated_fields = {
         'slug' : ['title']
     }
-    search_fields = ['first_name', 'last_name']
     actions = ['clear_inventory']
+    search_fields = ['title']
     list_display = ['title', 'unit_price', 'inventory_status', 'collection_title']
     list_editable = ['unit_price']
     list_per_page = 10
